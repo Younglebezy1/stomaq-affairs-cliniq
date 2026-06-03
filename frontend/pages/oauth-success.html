@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Logging you in…</title>
+  <link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body style="display:flex;align-items:center;justify-content:center;min-height:100vh;background:var(--cream);">
+  <p style="font-family:'Lato',sans-serif;color:#7c3f1a;font-size:1.1rem;">Logging you in, please wait…</p>
+  <script>
+    // Grab token & name from URL query params (set by backend after Google login)
+    const params = new URLSearchParams(window.location.search);
+    const token  = params.get("token");
+    const name   = params.get("name");
+    if (token) {
+      localStorage.setItem("stomaq_token", token);
+      localStorage.setItem("stomaq_name",  name || "");
+      window.location.href = "../index.html";
+    } else {
+      window.location.href = "login.html";
+    }
+  </script>
+</body>
+</html>

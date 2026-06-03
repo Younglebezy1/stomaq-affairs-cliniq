@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>STOMAQ AFFAIRS CLINIQ</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-logo">STOMAQ AFFAIRS CLINIQ</div>
+    <ul class="nav-links">
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#info">Hours</a></li>
+      <li><a href="#info">Location</a></li>
+      <li><a href="pages/login.html" class="nav-auth-btn">Login</a></li>
+      <li><a href="pages/register.html" class="nav-auth-btn signup">Sign Up</a></li>
+    </ul>
+  </nav>
+
+
+  <section class="hero" id="home">
+    <div class="hero-badge">Authentic Nigerian Obgonge Stomach Food</div>
+    <h1>STOMAQ <span>AFFAIRS</span> CLINIQ</h1>
+    <p class="hero-sub">Where every plate is a prescription for joy</p>
+    <div class="hero-cta">
+      <a href="#menu" class="btn btn-primary">View Our Menu</a>
+      <a href="#info" class="btn btn-outline">Find Us</a>
+    </div>
+  </section>
+
+  <section class="about fade-in">
+    <div class="section-label">Our Story</div>
+    <h2 class="section-title">A <em>cure</em> for hunger,<br>a feast for the soul</h2>
+    <div class="divider" style="margin:0 auto 2rem;"></div>
+    <p>
+      At Stomaq Affairs Cliniq, we believe food is medicine and great Nigerian food is the best prescription there is.
+      From steaming bowls of Egusi soup to perfectly grilled Suya, every dish is crafted with fresh local ingredients
+      and time-honoured recipes passed down through generations.
+    </p>
+  </section>
+
+  <!-- MENU -->
+  <section class="menu fade-in" id="menu">
+    <div class="menu-inner">
+      <div class="section-label">What We Serve</div>
+      <h2 class="section-title">Our <em>Menu</em></h2>
+      <div class="divider"></div>
+      <div class="menu-categories">
+        <button class="cat-btn active" onclick="filterMenu('all', this)">All</button>
+        <button class="cat-btn" onclick="filterMenu('soups', this)">Soups & Stews</button>
+        <button class="cat-btn" onclick="filterMenu('rice', this)">Rice Dishes</button>
+        <button class="cat-btn" onclick="filterMenu('grills', this)">Grills & BBQ</button>
+        <button class="cat-btn" onclick="filterMenu('sides', this)">Sides</button>
+      </div>
+      <div class="menu-grid" id="menuGrid"></div>
+    </div>
+  </section>
+
+  <!-- HOURS & LOCATION -->
+  <section style="padding:5rem 1.5rem;" class="fade-in" id="info">
+    <div class="info-section">
+      <div class="info-block">
+        <div class="section-label">We're Open</div>
+        <h2 class="section-title">Opening Hours</h2>
+        <ul class="hours-list">
+          <li><span>Monday – Friday</span><span>9:00 AM – 10:00 PM</span></li>
+          <li><span>Saturday</span><span>8:00 AM – 11:00 PM</span></li>
+          <li><span>Sunday</span><span>10:00 AM – 9:00 PM</span></li>
+          <li><span>Public Holidays</span><span>10:00 AM – 8:00 PM</span></li>
+        </ul>
+      </div>
+      <div class="info-block">
+        <div class="section-label">Visit Us</div>
+        <h2 class="section-title">Location</h2>
+        <div class="location-detail">
+          <strong>Address</strong>
+          Sangere Futy, Opp. FRSC,<br>gerei, Adamawa state, Nigeria
+          <strong>Phone</strong>+234 8030953495, +234 8081588011
+          <strong>Email</strong>lebechiuche@gmail.com
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 <span>Stomaq Affairs Cliniq</span> · All Rights Reserved · Yola, Nigeria</p>
+  </footer>
+
+  <!-- CART TOAST -->
+  <div class="cart-toast" id="cartToast">🍽 Added to order!</div>
+
+  <script src="js/menu.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
