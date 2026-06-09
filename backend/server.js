@@ -1,8 +1,3 @@
-// ===========================
-// server.js — Entry Point
-// Stomaq Affairs Cliniq Backend
-// ===========================
-
 require("dotenv").config();
 
 const express    = require("express");
@@ -38,7 +33,7 @@ app.use((req, res) => {
 // ── Start server after DB init ──
 initDB()
   .then(() => {
-    app.listen(PORT, () => console.log(`✅ Server running on http://localhost:${PORT}`));
+    app.listen(PORT, () => console.log(`✅ Server running on port ${PORT}`)
   })
   .catch(err => {
     console.error("❌ DB init failed:", err);
