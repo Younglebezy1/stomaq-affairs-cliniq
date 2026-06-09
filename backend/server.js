@@ -33,7 +33,9 @@ app.use((req, res) => {
 // ── Start server after DB init ──
 initDB()
   .then(() => {
-    app.listen(PORT, () => console.log(`✅ Server running on port ${PORT}`)
+    app.listen(PORT, () => {
+      console.log(`✅ Server running on port ${PORT}`);
+    });
   })
   .catch(err => {
     console.error("❌ DB init failed:", err);
